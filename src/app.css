@@ -1,0 +1,44 @@
+:root {
+	/* main */
+	--bg: #ffffff;
+	--surface: #dddddd;
+	--border: #000000;
+	--border-radius: 0;
+	--test-border-1: #ff7700;
+	--test-border-2: #ff0000;
+
+	/* Text: */
+	--text: #000000;
+	--text-mute: #000000aa;
+	--a: #004444;
+	--a-visited: #440044;
+
+	--font: 'Metamorphous', serif;
+	--font-mono: 'Roboto Mono Variable', ui-monospace, monospace;
+}
+
+body {
+	background-color: var(--bg);
+	padding: 0px;
+	margin: 0px;
+}
+
+a,
+p,
+span,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font);
+}
+
+a {
+	color: var(--a);
+}
+a:visited {
+	color: var(--a-visited);
+}
