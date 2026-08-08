@@ -1,12 +1,12 @@
 <script>
 	import TwoPanelLayout from '$lib/components/TwoPanelLayout.svelte';
 	import { onMount } from 'svelte';
+
+	// Apply global themes:
 	import { PUBLIC_THEME_KEY } from '$env/static/public';
-
 	const theme_key = `${PUBLIC_THEME_KEY}`;
-	let themes = ['light', 'dark', 'hacker'];
+	let themes = ['light', 'dark', 'papyrus', 'hacker'];
 	let theme = $state(null);
-
 	function changeTheme(change_to) {
 		theme = change_to;
 		localStorage.setItem(theme_key, change_to);
@@ -16,7 +16,6 @@
 		document.documentElement.setAttribute('data-theme', theme);
 		console.log('Changed theme to ' + theme);
 	});
-
 	onMount(() => {
 		// suppose I was going to launch theme here but I might not have to
 		theme = themes.includes(localStorage.getItem(theme_key))
@@ -29,9 +28,11 @@
 
 <TwoPanelLayout>
 	{#snippet options()}
-		<h3>Themes</h3>
+		<h3>Theme: {theme}</h3>
 		{#each themes as t}
-			<button onclick={() => changeTheme(t)}>{t}</button>
+			<div class="verticalFlex">
+				<button onclick={() => changeTheme(t)}>{t}</button>
+			</div>
 		{/each}
 	{/snippet}
 
@@ -45,11 +46,16 @@
 		<li><a href="design">Design:</a> Design a single room.</li>
 		<li><a href="link">Link:</a> Link rooms together.</li>
 		<li><a href="preview">Preview:</a> Try your adventure.</li>
+		<li><a href="lewlink">new</a></li>
 	</ul>
 </TwoPanelLayout>
 
 <style>
 	.bold {
 		text-decoration: underline;
+	}
+	.verticalFlex {
+		display: flex;
+		flex-direction: column;
 	}
 </style>
