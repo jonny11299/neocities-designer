@@ -17,6 +17,23 @@
 	--font-mono: 'Roboto Mono Variable', ui-monospace, monospace;
 }
 
+[data-theme='dark'] {
+	--bg: #000000;
+	--surface: #333333;
+	--border: #777777;
+	--border-radius: 0;
+
+	--text: #ffffff;
+	--text-mute: #ffffffaa;
+	--a: #00dddd;
+	--a-visited: #dd00dd;
+
+	--font: 'MedievalSharp', serif;
+}
+[data-theme='hacker'] {
+	--font: 'Jacquard 24', serif;
+}
+
 body {
 	background-color: var(--bg);
 	padding: 0px;
@@ -34,6 +51,7 @@ h4,
 h5,
 h6 {
 	font-family: var(--font);
+	color: var(--text);
 }
 
 a {

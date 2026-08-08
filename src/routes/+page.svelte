@@ -1,10 +1,38 @@
 <script>
 	import TwoPanelLayout from '$lib/components/TwoPanelLayout.svelte';
+	import { onMount } from 'svelte';
+	import { PUBLIC_THEME_KEY } from '$env/static/public';
+
+	const theme_key = `${PUBLIC_THEME_KEY}`;
+	let themes = ['light', 'dark', 'hacker'];
+	let theme = $state(null);
+
+	function changeTheme(change_to) {
+		theme = change_to;
+		localStorage.setItem(theme_key, change_to);
+	}
+	$effect(() => {
+		const t = theme;
+		document.documentElement.setAttribute('data-theme', theme);
+		console.log('Changed theme to ' + theme);
+	});
+
+	onMount(() => {
+		// suppose I was going to launch theme here but I might not have to
+		theme = themes.includes(localStorage.getItem(theme_key))
+			? localStorage.getItem(theme_key)
+			: 'light';
+
+		console.log('mounted with ' + theme);
+	});
 </script>
 
 <TwoPanelLayout>
 	{#snippet options()}
-		<p>this is the main page's options</p>
+		<h3>Themes</h3>
+		{#each themes as t}
+			<button onclick={() => changeTheme(t)}>{t}</button>
+		{/each}
 	{/snippet}
 
 	<h1>Welcome to the Faunix Neocities Designer</h1>

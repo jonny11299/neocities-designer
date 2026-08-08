@@ -1,6 +1,12 @@
 <script>
+	import { PUBLIC_THEME_KEY } from '$env/static/public';
+
+	/* importing style assets for the whole site ...  */
 	import '@fontsource/metamorphous';
 	import '@fontsource-variable/roboto-mono';
+	import '@fontsource/jacquard-24';
+	import '@fontsource/medievalsharp';
+
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 
