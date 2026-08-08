@@ -3,6 +3,7 @@
 	import TwoPanelLayout from '$lib/components/TwoPanelLayout.svelte';
 
 	import surprise from '$lib/assets/surprise.jpg';
+	import compycat from '$lib/assets/compycat.gif';
 </script>
 
 <TwoPanelLayout>
@@ -17,12 +18,14 @@
 		<p>Something failed on this page.</p>
 	{/if}
 
-	<img src={surprise} alt="" />
+	<img src={surprise} alt="" style="max-width: 200px;" />
+
+	<h2>Don't worry, our top guys are on it.</h2>
+	<img src={compycat} alt="" style="max-width: 400px;" />
 </TwoPanelLayout>
 
 <style>
 	img {
-		max-width: 200px;
 		padding-top: 2rem;
 	}
 </style>

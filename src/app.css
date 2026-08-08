@@ -36,8 +36,8 @@
 	--a: #00dddd;
 	--a-visited: #dd00dd;
 
-	--font: 'Metamorphous', serif;
-	--font-scale: 1;
+	--font: 'MedievalSharp', serif;
+	--font-scale: 1.1;
 }
 [data-theme='hacker'] {
 	--bg: #111111;
@@ -60,7 +60,7 @@
 }
 [data-theme='papyrus'] {
 	--font: 'MedievalSharp', serif;
-	--font-scale: 1.15;
+	--font-scale: 1.1;
 
 	--bg: #d6c7a6;
 	--surface: #f9f4ce;
@@ -110,7 +110,8 @@ a:visited {
 	color: var(--a-visited);
 }
 
-button {
+button,
+select {
 	border: 2px solid var(--border);
 	background-color: var(--bg);
 	padding: 0.3rem;
@@ -121,7 +122,8 @@ button {
 	font-size: calc(1rem * var(--font-scale));
 }
 
-button:hover {
+button:hover,
+select:hover {
 	cursor: pointer;
 	background-color: var(--button-hover);
 }
