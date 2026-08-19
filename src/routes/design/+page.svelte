@@ -5,6 +5,11 @@
 	const modes = ['image', 'audio', 'text'];
 	let mode = $state(modes[0]);
 
+	let uploaded_file = $state(null);
+	function printFile() {
+		console.log(uploaded_file);
+	}
+
 	// going to have the user upload image, audio, and text, then migrate it to a store.
 	//
 	// Realistically, what this page needs is:
@@ -29,10 +34,8 @@
 		</p>
 
 		{#if mode === 'image'}
-			<Dropzone name="image" type="image/*" />
-			<!--
-			<button class="centered">Submit</button>
-			 -->
+			<Dropzone name="image" type="image/*" bind:value={uploaded_file} />
+			<button class="centered" onclick={() => printFile()}>Print</button>
 		{/if}
 	{/snippet}
 

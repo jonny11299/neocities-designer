@@ -1,0 +1,8 @@
+
+
+Going to have to interact with S3 in a pretty decent way for this.
+Let's look at:
+https://github.com/lmammino/s3-presigned-urls-examples/tree/main
+
+The main thing will be that I'll have to put all this stuff server-side.
+Setting it up is always a big part of it...
