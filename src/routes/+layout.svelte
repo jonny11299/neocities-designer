@@ -8,7 +8,7 @@
 	import '@fontsource/medievalsharp';
 
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon/favicon-32x32.png';
 
 	let { children } = $props();
 </script>
@@ -24,6 +24,7 @@
 			<a href="/design">design</a>
 			<a href="/link">link</a>
 			<a href="/preview">preview</a>
+			<a href="/ideas">ideas</a>
 		</nav>
 	</div>
 	{@render children()}

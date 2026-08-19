@@ -21,6 +21,9 @@
 	--font: 'Metamorphous', serif;
 	--font-mono: 'Roboto Mono Variable', ui-monospace, monospace;
 	--font-scale: 1;
+
+	--layout-margin: 2px;
+	--layout-padding: 1rem;
 }
 
 [data-theme='dark'] {

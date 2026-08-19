@@ -24,18 +24,18 @@
 		background-color: var(--surface);
 		border: 0px solid var(--test-border-2);
 		border-radius: var(--border-radius);
-		margin: 2px;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		margin: var(--layout-margin);
+		padding-left: var(--layout-padding);
+		padding-right: var(--layout-padding);
 	}
 
 	.children {
 		background-color: var(--surface);
 		border: 0px solid var(--test-border-2);
 		border-radius: var(--border-radius);
-		margin: 2px;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		margin: var(--layout-margin);
+		padding-left: var(--layout-padding);
+		padding-right: var(--layout-padding);
 
 		aspect-ratio: 16/9;
 		width: auto;
